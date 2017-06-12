@@ -1,0 +1,36 @@
+/*colors -
+  Main Green: #61b34f
+  Light Green: #82c276
+*/
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 60vw;
+    width: 48vw;
+    border: 1px solid black;
+    background-color: #61b34f;
+    margin: auto;
+}
+
+.content-row {
+    height: 12vw;
+    display: flex;
+}
+
+.text-content {
+    border: .05em solid white;
+    flex-grow: 3;
+}
+
+.text-content:hover {
+    cursor: text;
+    }
+
+.squares {
+    border: .05em solid white;
+    /*flex-grow: 0;*/
+    width: 12vw;
+    cursor: pointer;
+}

@@ -1,28 +1,83 @@
 
-const sevenBtn = document.querySelector("#seven");
-const eightBtn = document.querySelector("#eight");
-const nineBtn = document.querySelector("#nine");
-const divideBtn = document.querySelector("#divide");
-const fourBtn = document.querySelector("#four");
-const fiveBtn = document.querySelector("#five");
-const sixBtn = document.querySelector("#six");
-const multiplyBtn = document.querySelector("#multiply");
-const oneBtn = document.querySelector("#one");
-const twoBtn = document.querySelector("#two");
-const threeBtn = document.querySelector("#three");
-const minusBtn = document.querySelector("#minus");
-const zeroBtn = document.querySelector("#zero");
-const dotBtn = document.querySelector("#dot");
-const equalsBtn = document.querySelector("#equals");
-const plusBtn = document.querySelector("#plus");
+var current,
+    screen,
+    output,
+    limit,
+    zero,
+    period,
+    operator;
 
-let btnList = document.querySelectorAll(".squares");
+  screen = document.getElementById("result");
 
+  var elem = document.querySelectorAll(".num");
+  var len = elem.length;
 
-for (let i = 0; i < btnList.length; i++) {
-  let btn = btnList[i];
+  for (var i = 0; i < len; i++) {
+        elem[i].addEventListener("click",function() {
+        num = this.value;
+        output = screen.innerHTML +=num;
+        limit = output.length;
 
-  btn.addEventListener("click", function(event) {
+        if(limit > 16 ) {
+        alert("That's as far as I got Isaac");
+      }
+    }, false);
+  }
 
-  });
+    document.querySelector(".zero")
+    .addEventListener("click",
+    function() {
+      zero = this.value;
+
+        if(screen.innerHTML === "") {
+          output = screen.innerHTML = zero;
+      }
+        else if(screen.innerHTML === output) {
+          output = screen.innerHTML += zero;
+      }
+    }, false
+  );
+
+    document.querySelector(".period")
+    .addEventListener("click",function() {
+      period = this.value;
+
+        if(screen.innerHTML === "") {
+          output = screen.innerHTML = screen.innerHTML.concat("0.");
+      }
+        else if(screen.innerHTML === output) {
+          screen.innerHTML = screen.innerHTML.concat(".");
+      }
+    }, false);
+
+    document.querySelector("#eqn-bg")
+    .addEventListener("click",function() {
+
+        if(screen.innerHTML === output) {
+          screen.innerHTML = eval(output);
+      }
+      else {
+          screen.innerHTML = "";
+      }
+    }, false);
+
+    document.querySelector("#delete")
+    .addEventListener("click",function() {
+      screen.innerHTML = "";
+    }, false);
+
+var elem1 = document.querySelectorAll(".operator");
+var len1 = elem1.length;
+
+  for(var i = 0; i < len1; i++ ) {
+    elem1[i].addEventListener("click",function() {
+      operator = this.value;
+
+        if(screen.innerHTML === "") {
+          screen.innerHTML = screen.innerHTML.concat("");
+      }
+        else if(output) {
+          screen.innerHTML = output.concat(operator);
+      }
+    }, false);
 }

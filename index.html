@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Calculator</title>
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+      <div class="container">
+          <div id="main">
+            <div id="first-row">
+              <button class="btn-style num-bg num" id="delete">C</button>
+              <div id="result"></div>
 
-    <div class="container">
-        <div class="content-row">
-            <div id="clear" class="squares">C</div>
-            <div id="result" class="text-content"></div>
-        </div>
-      <div class="content-row">
-            <div id="seven" value="7" class="squares">7</div>
-            <div id="eight" value="8" class="squares">8</div>
-            <div id="nine" value="9" class="squares">9</div>
-            <div id="divide" value="/" class="squares">/</div>
+            </div>
+            <div class="rows">
+              <button value="7" class="btn-style num-bg num first-child">7</button>
+              <button value="8" class="btn-style num-bg num">8</button>
+              <button value="9" class="btn-style num-bg num">9</button>
+              <button value="/" class="btn-style opera-bg operator">/</button>
+            </div>
+            <div class="rows">
+              <button value="4" class="btn-style num-bg num first-child">4</button>
+              <button value="5" class="btn-style num-bg num">5</button>
+              <button value="6" class="btn-style num-bg num">6</button>
+              <button value="*" class="btn-style opera-bg operator">x</button>
+            </div>
+            <div class="rows">
+              <button value="1" class="btn-style num-bg num first-child">1</button>
+              <button value="2" class="btn-style num-bg num">2</button>
+              <button value="3" class="btn-style num-bg num">3</button>
+              <button value="-" class="btn-style opera-bg operator">-</button>
+            </div>
+            <div class="rows">
+              <button value="0" class="btn-style num-bg num first-child">0</button>
+              <button value="." class="btn-style num-bg period fall-back">.</button>
+              <button value="=" id="eqn-bg" class="eqn align">=</button>
+              <button value="+" class="btn-style opera-bg value align operator">+</button>
+            </div>
+          </div>
       </div>
-      <div class="content-row">
-            <div id="four" value="4" class="squares">4</div>
-            <div id="five" value="5" class="squares">5</div>
-            <div id="six" value="6" class="squares">6</div>
-            <div id="multiply" value="*" class="squares">*</div>
-      </div>
-      <div class="content-row">
-          <div id="one" value="1" class="squares">1</div>
-          <div id="two" value="2" class="squares">2</div>
-          <div id="three" value="3" class="squares">3</div>
-          <div id="minus" value="-" class="squares">-</div>
-      </div>
-      <div class="content-row">
-          <div id="zero" value="0" class="squares">0</div>
-          <div id="dot" value="." class="squares">.</div>
-          <div id="equals" value="=" class="squares">=</div>
-          <div id="plus" value="+" class="squares">+</div>
-      </div>
-    </div>
-
     <script src="main.js"></script>
   </body>
 </html>
